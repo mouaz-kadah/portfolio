@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouaz Kadah | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <!-- Floating Navigation -->
+<nav class="menu" role="navigation">
+    <a href="#home" class="link" aria-label="Home">
+        <span class="link-icon material-symbols-rounded">dashboard</span>
+        <span class="link-title">Home</span>
+    </a>
+    <a href="#projects" class="link" aria-label="Projects">
+        <span class="link-icon material-symbols-rounded">folder</span>
+        <span class="link-title">Projects</span>
+    </a>
+    <a href="#contact" class="link" aria-label="Contact">
+        <span class="link-icon material-symbols-rounded">chat</span>
+        <span class="link-title">Contact</span>
+    </a>
+    <a href="#skills" class="link" aria-label="Skills">
+        <span class="link-icon material-symbols-rounded">settings</span>
+        <span class="link-title">Skills</span>
+    </a>
+    <a href="#about" class="link" aria-label="About">
+        <span class="link-icon material-symbols-rounded">person</span>
+        <span class="link-title">About</span>
+    </a>
+    <a href="#tbn" class="link" aria-label="tbn">
+        <span class="link-icon material-symbols-rounded">key</span>
+        <span class="link-title">key</span>
+    </a>
+</nav>
+<button id="themeBtn" class="theme-btn">🌙</button>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Hi, I'm <span>Mouaz Kadah</span></h1>
+        <p>Software Engineering Student | Cyber Security Enthusiast</p>
+        <a href="#contact" class="btn">Contact Me</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a 3rd year Software Engineering student passionate about Cyber Security and building full-stack applications.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">Python</div>
+            <div class="skill-card">HTML/CSS</div>
+            <div class="skill-card">SQL</div>
+                      
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div id="projects-container">
+            <!-- Projects will load from database -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
