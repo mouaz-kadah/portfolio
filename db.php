@@ -1,9 +1,9 @@
 <?php
-$host = 'localhost';
-$port = '3307';
-$dbname = 'portfolio_db';
-$username = 'root';
-$password = '';
+$host = 'sql311.infinityfree.com';
+$port = '3306';
+$dbname = 'if0_41902891_portfolio_db';
+$username = 'if0_41902891';
+$password = '1215381026';
 
 try {
     $pdo = new PDO(

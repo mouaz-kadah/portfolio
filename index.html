@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,63 +8,115 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
 </head>
+
+<footer>
+    <p>© 2026 Mouaz Kadah. Built with HTML, CSS, JavaScript, PHP & MySQL.</p>
+</footer>
+
 <body>
+    
 
     <!-- Navigation -->
     <!-- Floating Navigation -->
-<nav class="menu" role="navigation">
-    <a href="#home" class="link" aria-label="Home">
-        <span class="link-icon material-symbols-rounded">dashboard</span>
-        <span class="link-title">Home</span>
-    </a>
-    <a href="#projects" class="link" aria-label="Projects">
-        <span class="link-icon material-symbols-rounded">folder</span>
-        <span class="link-title">Projects</span>
-    </a>
-    <a href="#contact" class="link" aria-label="Contact">
-        <span class="link-icon material-symbols-rounded">chat</span>
-        <span class="link-title">Contact</span>
-    </a>
-    <a href="#skills" class="link" aria-label="Skills">
-        <span class="link-icon material-symbols-rounded">settings</span>
-        <span class="link-title">Skills</span>
-    </a>
-    <a href="#about" class="link" aria-label="About">
-        <span class="link-icon material-symbols-rounded">person</span>
-        <span class="link-title">About</span>
-    </a>
-    <a href="#tbn" class="link" aria-label="tbn">
-        <span class="link-icon material-symbols-rounded">key</span>
-        <span class="link-title">key</span>
-    </a>
+<nav class="navbar">
+    <div class="nav-logo">Mouaz Kadah</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+        <label class="toggle-switch">
+    <input type="checkbox" id="themeToggle">
+    <span class="toggle-slider"></span>
+</label>
 </nav>
-<button id="themeBtn" class="theme-btn">🌙</button>
 
-    <!-- Home Section -->
     <section id="home">
-        <h1>Hi, I'm <span>Mouaz Kadah</span></h1>
-        <p>Software Engineering Student | Cyber Security Enthusiast</p>
-        <a href="#contact" class="btn">Contact Me</a>
-    </section>
+    <div class="profile-img">M</div>
+    <h1>Hi, I'm <span id="userName">Mouaz Kadah</span></h1>
+    <p id="userTitle">Software Engineering Student</p>
+    
+    <div class="social-links">
+        <a href="https://github.com/mouaz-kadah" target="_blank" class="social-btn">
+            <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/mouaz-kadah-1101a0264/" target="_blank" class="social-btn">
+            <span>LinkedIn</span>
+        </a>
+        <a href="mailto:muaz.kadah@gmail.com" class="social-btn">
+            <span>Email</span>
+        </a>
+    </div>
+    <div class="scroll-indicator">
+    <span>↓</span>
+</div>
+
+    <a href="#contact" class="btn">Contact Me</a>
+</section>
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a 3rd year Software Engineering student passionate about Cyber Security and building full-stack applications.</p>
-    </section>
+    <h2>About Me</h2>
+    <p>I'm a 3rd year Software Engineering student passionate about Cyber Security and building full-stack applications.</p>
+    
+    <table class="about-table">
+        <tr>
+            <th>Name</th>
+            <td>Mouaz Kadah</td>
+        </tr>
+        <tr>
+            <th>Education</th>
+            <td>Software Engineering - 3rd Year</td>
+        </tr>
+        <tr>
+            <th>Interests</th>
+            <td>Cyber Security, Full-Stack Development</td>
+        </tr>
+        <tr>
+            <th>Location</th>
+            <td>Istanbul, Turkey</td>
+        </tr>
+    </table>
+</section>
 
     <!-- Skills Section -->
     <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">Python</div>
-            <div class="skill-card">HTML/CSS</div>
-            <div class="skill-card">SQL</div>
-                      
-
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <span class="skill-icon">🐍</span>
+            <h3>Python</h3>
+            <p>Scripting & automation</p>
         </div>
-    </section>
-
+        <div class="skill-card">
+            <span class="skill-icon">🎨</span>
+            <h3>HTML/CSS</h3>
+            <p>Web design & styling</p>
+        </div>
+        <div class="skill-card">
+            <span class="skill-icon">🗄️</span>
+            <h3>SQL</h3>
+            <p>Database management</p>
+        </div>
+        <div class="skill-card">
+            <span class="skill-icon">⚙️</span>
+            <h3>C/C++</h3>
+            <p>Systems programming</p>
+        </div>
+        <div class="skill-card">
+            <span class="skill-icon">🔐</span>
+            <h3>Cyber Security</h3>
+            <p>Network & system security</p>
+        </div>
+        <div class="skill-card">
+            <span class="skill-icon">🌐</span>
+            <h3>JavaScript</h3>
+            <p>Web interactivity</p>
+        </div>
+    </div>
+</section>
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>

@@ -1,15 +1,15 @@
-// ===== THEME BUTTON =====
-const themeBtn = document.getElementById('themeBtn');
-if (themeBtn) {
-    themeBtn.addEventListener('click', function() {
-        document.body.classList.toggle('light-mode');
-        if (document.body.classList.contains('light-mode')) {
-            themeBtn.textContent = '☀️';
-        } else {
-            themeBtn.textContent = '🌙';
-        }
-    });
-}
+// ===== THEME TOGGLE =====
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) return;
+
+    function updateTheme() {
+        document.body.classList.toggle('light-mode', themeToggle.checked);
+    }
+
+    themeToggle.addEventListener('change', updateTheme);
+    updateTheme();
+});
 
 // ===== LOAD PROJECTS =====
 function loadProjects() {
@@ -59,5 +59,45 @@ if (contactForm) {
                 alert('Error: ' + data.message);
             }
         });
+    });
+}
+
+// ===== USER DATA =====
+const userName = "Mouaz Kadah";
+const userTitle = "Software Engineering Student";
+
+const skills = ["Python", "HTML/CSS", "JavaScript", "SQL", "C/C++", "Cyber Security"];
+
+const developerProfile = {
+    name: userName,
+    title: userTitle,
+    age: 21,
+    education: "Software Engineering",
+    year: 3,
+    skills: skills,
+    interests: ["Cyber Security", "Full-Stack Development"]
+};
+
+// Console logs
+console.log("Name:", userName);
+console.log("Title:", userTitle);
+console.log("Skills array:", skills);
+console.log("First skill:", skills[0]);
+console.log("Developer Profile:", developerProfile);
+console.log("Profile name:", developerProfile.name);
+console.log("Profile interests:", developerProfile.interests);
+
+// ===== BOM EXAMPLES =====
+console.log("Browser language:", navigator.language);
+console.log("Screen width:", screen.width);
+console.log("Current URL:", location.href);
+
+// ===== EVENT DELEGATION =====
+const navLinks = document.querySelector('.nav-links');
+if (navLinks) {
+    navLinks.addEventListener('click', function(event) {
+        if (event.target.tagName === 'A') {
+            console.log("Clicked nav link:", event.target.textContent);
+        }
     });
 }
