@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
     updateTheme();
 });
 
-// ===== LOAD PROJECTS =====
+// ===== LOAD PROJECTS (AJAX) =====
 function loadProjects() {
+    const container = document.getElementById('projects-container');
     fetch('get_projects.php')
         .then(response => response.json())
         .then(projects => {
-            const container = document.getElementById('projects-container');
             if (projects.length === 0) {
                 container.innerHTML = '<p>No projects yet.</p>';
                 return;
@@ -29,6 +29,9 @@ function loadProjects() {
                     <a href="${project.link}" class="btn" target="_blank">View Project</a>
                 </div>
             `).join('');
+        })
+        .catch(err => {
+            container.innerHTML = '<p>Failed to load projects.</p>';
         });
 }
 
@@ -42,9 +45,11 @@ if (contactForm) {
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
+
         if (name === '') { alert('Please enter your name!'); return; }
         if (email === '') { alert('Please enter your email!'); return; }
         if (message === '') { alert('Please enter your message!'); return; }
+
         fetch('contact.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -58,6 +63,9 @@ if (contactForm) {
             } else {
                 alert('Error: ' + data.message);
             }
+        })
+        .catch(err => {
+            alert('Failed to send message. Please try again.');
         });
     });
 }
