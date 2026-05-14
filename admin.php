@@ -15,7 +15,6 @@ if (isset($_GET['delete'])) {
     exit;
 }
 
-// إضافة مشروع
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = trim($_POST['title']);
     $description = trim($_POST['description']);
