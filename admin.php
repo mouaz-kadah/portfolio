@@ -8,7 +8,6 @@ if (!isset($_SESSION['admin'])) {
 
 require_once 'db.php';
 
-// حذف مشروع
 if (isset($_GET['delete'])) {
     $stmt = $pdo->prepare("DELETE FROM projects WHERE id = ?");
     $stmt->execute([$_GET['delete']]);
@@ -29,10 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
-// جلب المشاريع
 $projects = $pdo->query("SELECT * FROM projects ORDER BY created_at DESC")->fetchAll();
 
-// جلب الرسائل
 $messages = $pdo->query("SELECT * FROM messages ORDER BY created_at DESC")->fetchAll();
 ?>
 
